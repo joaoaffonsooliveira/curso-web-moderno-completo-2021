@@ -1,3 +1,5 @@
+// O this não varia quando utilizado em uma arrow function. Mantém contexto léxico
+
 function Pessoa() {
     this.idade = 0
 
