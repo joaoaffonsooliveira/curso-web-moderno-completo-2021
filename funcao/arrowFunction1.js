@@ -1,3 +1,7 @@
+// Arrow function foi criada com 2 propósitos principais
+// 1) ser mais enxuta
+// 2) ter um this que não varia. O this permanece o mesmo no contexto léxico no qual foi criado.
+
 let dobro = function (a) {
     return 2 * a
 }
