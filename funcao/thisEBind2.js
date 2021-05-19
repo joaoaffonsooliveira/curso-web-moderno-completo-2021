@@ -1,3 +1,18 @@
+// Primeira forma de driblar a variação do this é usando bind
+
+function Pessoa() {
+    this.idade = 0
+
+    setInterval(function() {
+        this.idade++
+        console.log(this.idade)
+    }.bind(this), 1000)
+}
+
+new Pessoa
+
+// Segunda forma de driblar a variação do this é com o artifício tecnologico de uma variável.
+
 function Pessoa() {
     this.idade = 0
 
@@ -5,7 +20,7 @@ function Pessoa() {
     setInterval(function() {
         self.idade++
         console.log(self.idade)
-    }/*.bind(this)*/, 1000)
+    }, 1000)
 }
 
 new Pessoa
