@@ -1,3 +1,4 @@
+/* Em JS uma classe é basicamente uma outra forma de escrever uma função */
 class Pessoa {
     constructor(nome) {
         this.nome = nome
