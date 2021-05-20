@@ -1,3 +1,6 @@
+/* A função construtora ela funciona como se fosse uma classe. Ou seja, é um molde para
+a construção de "objetos" */
+
 function Carro(velocidadeMaxima = 200, delta = 5) {
     // atributo privado
     let velocidadeAtual = 0
@@ -22,10 +25,10 @@ uno.acelerar()
 console.log(uno.getVelocidadeAtual())
 
 const ferrari = new Carro(350, 20)
-ferrari.acelerar()
-ferrari.acelerar()
-ferrari.acelerar()
+ferrari.acelerar() // 0 + 20 = 20
+ferrari.acelerar() // 20 + 20 = 40
+ferrari.acelerar() // 40 + 20 = 60
 console.log(ferrari.getVelocidadeAtual())
 
-console.log(typeof Carro)
-console.log(typeof ferrari)
+console.log(typeof Carro) // function --> A função construtora é uma função 
+console.log(typeof ferrari) // object --> objeto instanciado pela função construtora
