@@ -40,5 +40,5 @@ console.log(carro)
 delete carro.proprietario.endereco
 delete carro.calcularValorSeguro
 console.log(carro)
-console.log(carro.condutores)
-console.log(carro.condutores.length)
+console.log(carro.condutores)  // undefined
+console.log(carro.condutores.length) // erro
