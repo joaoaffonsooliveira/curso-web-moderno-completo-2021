@@ -1,5 +1,5 @@
 const sequencia = {
-    _valor: 1, // convenção
+    _valor: 1, // É uma convenção entre programadores mostrando que o atributo valor é privado. OBS: ela não torna privado, é só convenção.
     get valor() { return this._valor++ },
     set valor(valor) { 
         if(valor > this._valor) {
