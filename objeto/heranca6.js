@@ -7,10 +7,10 @@ const aula1 = new Aula('Bem Vindo', 123)
 const aula2 = new Aula('Até Breve', 456)
 console.log(aula1, aula2)
 
-// simulando o new
+// simulando o operador new
 function novo(f, ...params) {
     const obj = {}
-    obj.__proto__ = f.prototype
+    obj.__proto__ = f.prototype // associei o protótipo desse objeto ao atributo prototype da função
     f.apply(obj, params)
     return obj
 }
