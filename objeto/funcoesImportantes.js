@@ -36,3 +36,7 @@ const obj = Object.assign(dest, o1, o2) // pega os atributos de o1 e o2 e concat
 Object.freeze(obj)
 obj.c = 1234
 console.log(obj)
+
+// Object.setPrototypeOf(filho, pai) 
+/* Função muito importante que estabelece a relação de prototype que
+estudaremos em herança entre um objeto pai e um objeto filho*/
