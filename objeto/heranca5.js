@@ -1,12 +1,13 @@
-console.log(typeof String)
-console.log(typeof Array)
-console.log(typeof Object)
+console.log(typeof String) // function
+console.log(typeof Array) // function
+console.log(typeof Object) // function
+/* Ou seja, string, array e object possuem um atributo chamado .prototype */
 
 String.prototype.reverse = function () {
-    return this.split('').reverse().join('')
+    return this.split('').reverse().join('') // acessamos usando this
 }
 
-console.log('Escola Cod3r'.reverse())
+console.log('Escola Cod3r'.reverse()) // literal do tipo string
 
 Array.prototype.first = function() {
     return this[0]
@@ -15,7 +16,7 @@ Array.prototype.first = function() {
 console.log([1, 2, 3, 4, 5].first())
 console.log(['a', 'b', 'c'].first())
 
-String.prototype.toString = function () {
+String.prototype.toString = function () {  // Não faça isso! não substitua comportamentos que já existem
     return 'Lascou tudo'
 }
 
