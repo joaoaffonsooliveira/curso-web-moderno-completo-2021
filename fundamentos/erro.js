@@ -16,7 +16,7 @@ function imprimirNomeGritado(obj) {
     } catch(e) {
         tratarErroELancar(e)
     } finally {
-        console.log('Final')
+        console.log('Final') // o finally é chamado de qualquer forma
     }
 }
 
