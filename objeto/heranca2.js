@@ -33,7 +33,7 @@ const ferrari = {
 const volvo = {
     modelo: 'V40',
     status() {
-        return `${this.modelo}: ${super.status()}` /*uso o super para chamar o método do meu protótipo carro*/
+        return `${this.modelo}: ${super.status()}` /*uso o super para chamar/referenciar o método do meu protótipo carro*/
     }
 }
 
