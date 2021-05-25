@@ -1,4 +1,8 @@
-class Lancamento {
+/* A classe em JS é mais um detalhe de sintaxe, porque no final das contas é uma forma diferente
+de escrever uma função construtora. A classe não acrescenta tanto, porém pode ser útil em alguns
+poucos casos */
+
+class lancamento {
     constructor(nome = 'Genérico', valor = 0) {
         this.nome = nome
         this.valor = valor
