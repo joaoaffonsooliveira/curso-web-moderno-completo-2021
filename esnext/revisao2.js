@@ -1,12 +1,14 @@
 // Arrow Function
-const soma = (a, b) => a + b
-console.log(soma(2, 3))
+const soma = (a, b) => a + b // toda arrow function é anônima que podemos atribuir a uma variável
+// se houver apenas um parâmetro podemos omitir ()
+// se houver corpo de função {} necessitamos colocar o return. No exemplo acima temos return implícito
+console.log(soma(2, 3)) 
 
 // Arrow Function (this)
-const lexico1 = () => console.log(this === exports)
-const lexico2 = lexico1.bind({})
-lexico1()
-lexico2()
+const lexico1 = () => console.log(this === exports) // no Node this assume valor de objeto exports
+const lexico2 = lexico1.bind({}) // Nesse caso não conseguimos forçar com o bind
+lexico1() // true
+lexico2() // true
 
 // parametro default
 function log(texto = 'Node') {

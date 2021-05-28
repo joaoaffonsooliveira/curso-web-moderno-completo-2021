@@ -1,10 +1,11 @@
-// let e const
+// let e var
 {
     var a = 2
     let b = 3
     console.log(b)
 }
-console.log(a)
+console.log(a) // a tem escopo global
+// console.log(b) // gera um erro porque b tem escopo local
 
 // Template String
 const produto = 'iPad'
