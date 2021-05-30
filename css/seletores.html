@@ -6,9 +6,24 @@
     <title>CSS Selectors</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* p ~ ol */
-        /* [feira*=sa] */
-        /* section > :nth-child(odd) */
+        /* * */
+        /* .tag */
+        /* #aprovados */
+        /* aninhado > div */
+        /* aninhado > section dá erro porque não é filho direto de aninhado */
+        /* aninhado section      section e seus filhos são escolhidos */
+        /* p + ul    seleciona o irmão imediato, ou seja p e ul são irmãos e ul vem dps de p. Ul é selecionado */
+        /* p + ol    dá erro porque são irmãos, porém ol não vem imediatamente após */
+        /* p ~ ol    funciona porque p e ol são irmãos e ol não vem imediatamente após, general siblings */
+        /* [feira]   seleciona uma propriedade personalizada */
+        /* [feira = casa] seleciona uma propriedade personalizada que tem valor casa */
+        /* [feira ~= escritorio] seleciona propriedade personalizada que tem valor escritorio ... */
+        /* [feira*=sa] seleciona propriedades personalizadas que tenham contido no valor sa*/
+        /* span:nth-child(1)  escolhe o primeiro filho do span */
+        /* section > :nth-child(odd)  escolhe filhos ímpares dentro da div section*/
+        /* section > :nth-child(even)  escolhe filhos pares dentro da div section*/
+        /* section > :nth-child(odd) label escolhe apenas label do span*/
+        /* o exemplo abaixo seleciona segundo elemento do tipo span */
         section > span:nth-of-type(2) {
             color: #ff0;
             background-color: #f77;
@@ -35,7 +50,7 @@
             </ol>
             <div id='aninhado' class='tag'>
                 <div class="tag">
-                    <section class='tag nolabel'>
+                    <section class='tag nolabel'> <!-- Colocamos o nolabel para não dar erro no span:nth-child -->
                         <span class='tag'>1</span>
                         <p class='tag'>2</p>
                         <span class='tag'>3</span>

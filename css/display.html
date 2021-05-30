@@ -16,13 +16,20 @@
         span { background-color: dodgerblue; }
         li { background-color: purple; }
 
+/* por padrão a div é display block */
+/* por padrão o span é display inline */
+/* por padrão li é display list-item */
+/* o display block significa que cada elemento terá sua própria linha */
+/* o display inline significa que os elementos ficam na mesma linha. Algumas propriedades são ignoradas como altura e largura */
+/* o display inline block significa que mantenho os elementos na mesma linha, mas agora as propriedades como altura e largura são válidas */
+
         div, span, li {
-            width: 50%;
-            width: 200px;
-            height: 80px;
-            padding-top: 30px;
+            width: 50%; /* antes do display block span não considerava */
+            width: 200px; /* antes do display block span não considerava */
+            height: 80px; /* antes do display block span não considerava */
+            padding-top: 30px; /* única que antes do display block o span considerava */
             text-align: center;
-            display: inline;
+            display: inline; /* os componentes ficam n */
             display: block;
             display: inline-block;
         }
