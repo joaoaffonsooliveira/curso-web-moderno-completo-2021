@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <title>Altura e Largura</title>
     <style>
+        
+        /* por padrão html não pega 100% da altura, por isso definimos aqui */
         html {
             height: 100%;
         }
 
+        /* por padrão body não pega 100% da altura, por isso definimos aqui */
         body {
             font-size: 40px;
             background-color: coral;
@@ -23,12 +26,14 @@
         span {
             background-color: dodgerblue;
         }
-
-        span,
-        div {
+/* valores absolutos forçam a div a aumentar de tamanho e consequentemente o body também. 
+Valores relativos tipo 50% não surtem efeito porque o tamanho da body está igual a div + span e 
+por isso não há aumento*/
+/* por padrão o body já ocupa a largura de 100%, porém a altura não */
+        span, div {
             width: 50%;
             height: 250px;
-            height: 50%;
+            height: 50%; 
             display: block;
         }
     </style>

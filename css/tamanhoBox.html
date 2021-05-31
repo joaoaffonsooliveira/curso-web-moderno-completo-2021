@@ -5,12 +5,17 @@
     <title>Tamanho Box</title>
     <style>
         * {
+            /* o box-sizing border-box leva em consideração o padding e a borda */
+            /* o box-sizing content-box leva em consideração apenas o content. Ou seja, não considera padding e border */
             box-sizing: border-box;
         }
         
         body {
             font-size: 45px;
+            /* elimina margin padrão de 8px */
             margin: 0;
+            /* o box-sizing não funciona por herança como padrão. Mas podemos fazer como o caso acima usando seletor universal */
+            /* box-sizing: border-box; */
         }
 
         div {

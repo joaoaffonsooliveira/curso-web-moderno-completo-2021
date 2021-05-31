@@ -5,24 +5,41 @@
     <meta charset="UTF-8">
     <title>Float</title>
     <style>
+
+        /* float significa flutuação */
+        /* podemos usar o float, mas é bom usar com cuidado porque tem que ficar limando, 
+        hoje temos melhores formas de fazer isso usando flex box e CSS grid */
+
         body {
             background-color: #222;
         }
 
         .c1 {
             background-color: red;
+            /* bloco vermelho flutua para a direita e o bloco verde subiria ocupando o antigo lugar do vermelho*/
             float: right;
         }
+
+        /* os outros elementos se comportam desconsiderando a flutuação do elemento C1. Ou seja, o bloco verde
+        fica ocupando o antigo lugar do bloco vermelho. Para resolver isso usamos o clear (limpar flutuação) */
         
         .c2 {
             background-color: green;
+            /* clear right vai limpar a flutuação do bloco branco. o bloco verde volta a ocupar seu local anterior */
             clear: right;
+            /* agora com o float left o verde fica flutuando à esquerda (no seu atual local) */
             float: left;
         }
+
+        /* os outros elementos se comportam desconsiderando a flutuação do elemento C2(verde). Ou seja, o bloco azul sobe
+        e o bloco amarelo fica por baixo do bloco verde. Para resolver isso usamos o clear (limpar flutuação) */
         
         .c3 {
             background-color: blue;
             clear: both;
+            /* com o clear right o bloco azul fica abaixo do bloco verde */
+            /* clear: right; */
+            /* clear: left; */
         }
 
         .c4 {
@@ -30,6 +47,7 @@
             float: right;
         }
 
+        /* a div é por padrão do tipo display block */
         div {
             height: 150px;
             width: 150px;
