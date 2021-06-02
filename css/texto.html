@@ -27,40 +27,43 @@
 
         p {
             /* valores padrões */
-            font-size: 1em;
-            font-size: 100%;
+            /* 1 em = 100% = 16px = 12pt */
+            font-size: 1em; /* A fonte terá (1 * valor padrão) = valor padrão ou seja, 50px como setamos acima */
+            font-size: 100%; 
             font-size: 16px;
-            font-size: 12pt;
+            font-size: 12pt; 
 
             /* unidades absolutas */
+            /* 72pt = 1in */
             font-size: 100px; /* tamanho do pixel é relativo */
             font-size: 72pt; /* pontos */
-            font-size: 1in; /* polegada */
+            font-size: 1in; /* inch = polegada */
 
             /* unidades relativas */
-            font-size: 2.2em;
-            font-size: 2.2rem;
-            font-size: 50vh;
-            font-size: 10vw;
+            font-size: 2.2em; /* (2 * valor padrão ou mais próximo). No caso, como p está dentro de div
+            teremos o valor mais próximo como 50px. logo 2.2 * 50px ) */
+            font-size: 2.2rem; /* usa a referência do html (raíz). Nesse caso, 2.2 * 28px porque setamos html lá em cima */
+            font-size: 50vh; /* não muito usual ou comum */
+            font-size: 10vw; /* não muito usual ou comum */
 
             font-family: monospace;
             font-family: Georgia, serif;
             font-family: Verdana, sans-serif;
             font-family: 'Indie Flower', cursive;
 
-            font-weight: 100;
+            font-weight: 100; /* vai de 100 a 900 ou valores padrões como bold */
             font-style: italic;
             text-transform: uppercase;
             /* text-decoration: overline underline line-through; */
-            word-spacing: 10px;
-            letter-spacing: 20px;
-            line-height: 2.5em;
-            text-align: center;
+            word-spacing: 10px; /* separação entre palavras */
+            letter-spacing: 20px; /* separação entre letras */
+            line-height: 2.5em; /* altura da linha */
+            text-align: center; /* alinhamento do texto */
         }
 
         .botao {
             font-size: 28px;
-            text-decoration: none;
+            text-decoration: none; /* tirando a decoração do botão */
             padding: 10px 30px;
             border-radius: 25px;
         }

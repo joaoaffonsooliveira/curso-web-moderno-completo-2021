@@ -4,23 +4,32 @@
     <meta charset="UTF-8">
     <title>Media Query</title>
     <style>
+
+        /* as medias querys são utilizadas p/ deixar o site mais responsivo */
+
         div {
             font-size: 40px;
             margin: 20px;
             padding: 20px;
             background-color: coral;
             border: solid 5px;
+            /* display none para não aparecer na tela */
             display: none;
         }
-
+        
+        /* de 0px a 600px o comando display block é executado em .muito-pequeno */
         @media (max-width: 600px) {
             .muito-pequeno { display: block; }
         }
 
+        /* se tamanho de 0px a 1000px OU a orientação é do tipo portrait o comando display block
+        é executado em .pequeno-retrato */
+        /* orientation também pode receber o valor landscape(paisagem) */
         @media (max-width: 1000px), (orientation: portrait) {
             .pequeno-retrato { display: block; }
         }
 
+        /* se tamanho estiver entre 500px e 1000px o comando display block é executado em .intervalo */
         @media (min-width: 500px) and (max-width: 1000px) {
             .intervalo { display: block; }
         }

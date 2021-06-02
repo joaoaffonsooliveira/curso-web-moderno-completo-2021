@@ -13,12 +13,16 @@
         }
 
         .static {
+            /* top e left não são considerados porque por padrão o position é estatic */
+            /* o static leva em consideração as outras divs */
             top: 100px;
             left: 100px;
             background-color: steelblue;
         }
 
         .fixed {
+            /* o bloco fica fixo na posição 0px alinhado com a direita e a 30px da parte inferior, conseguimos 
+            rolar a página */
             position: fixed;
             bottom: 30px;
             right: 0px;
@@ -26,6 +30,8 @@
         }
 
         .relative1 {
+            /* relativo, leva em consideração o elemento anterior. O bloco ficará a 50 px da esquerda e entre
+            a div de cima e essa haverá 5px de distância */
             position: relative;
             left: 50px;
             top: 5px;
@@ -33,6 +39,7 @@
         }
 
         .absolute1 {
+            /* leva em consideração minha viewport, posso colocar acima de outros elementos */
             position: absolute;
             left: 350px;
             top: 120px;
@@ -49,6 +56,7 @@
         }
 
         .absolute2 {
+            /* se comporta de forma absoluta com relação ao elemento pai, ou seja, relative2 */
             position: absolute;
             left: 10px;
             top: 10px;
@@ -58,6 +66,7 @@
         }
 
         .sticky {
+            /* O sticky gruda ao chegar em determinada posição */
             position: -webkit-sticky; /* safari */
             position: sticky;
             background-color: #777;

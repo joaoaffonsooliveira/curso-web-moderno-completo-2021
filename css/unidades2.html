@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <title>Unidades #02</title>
     <style>
+        /* por padrão uma div já possui width de 100%, em contrapartida não possui height definida, ou seja
+        , sem conteúdo na div temos uma altura igual a zero. Com conteúdo a altura da div será do tamanho do
+        conteúdo, que é o padrão do display block */
         .fora {
             position: relative;
             background-color: orange;
+            /* criando um quadrado laranja de 400px por 400px */
             height: 400px;
             width: 400px;
+            /* aumentando o quadrado laranja para ser 500px por 500px */
             padding: 50px;
         }
 
@@ -16,10 +21,11 @@
             background-color: mediumvioletred;
             height: 100px;
             width: 100%;
+            /* o position padrão é o static (default) */
             position: static; /* conteudo */
             position: relative; /* conteudo */
-            position: absolute; /* conteudo + padding */
-            position: fixed; /* viewport */
+            position: absolute; /* Considera conteudo + padding. Ou seja, extrapola o quadrado em 50 px */
+            position: fixed; /* baseado no tamanho da viewport */
         }
     </style>
 </head>
