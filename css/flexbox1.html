@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Flexbox #01</title>
     <style>
+        /* o flex box é uma tecnologia nativa do css3 e é unidimensional */
         div {
             border: solid 5px dodgerblue;
             font-size: 40px;
@@ -16,29 +17,41 @@
         }
 
         .flex-container {
+            /* por padrão o main axis é do tipo row */
             display: flex;
+            /* setando main axis para column */
             flex-direction: column;
+            /* agora temos uma coluna com os itens invertidos  */
             flex-direction: column-reverse;
+            /* agora temos uma linha invertida */
             flex-direction: row-reverse;
+            /* setando main axis para row (default) */
             flex-direction: row;
+            /* flex container ocupando 50% da viewport */
             width: 50%;
+            /* realizo quebra evita overflow */
             flex-wrap: wrap;
+            /* realizo quebra de forma inversa, evita overflow */
             flex-wrap: wrap-reverse;
+            /* o flex flow é uma mistura do flex direction com o flex wrap */
             flex-flow: row wrap;
             height: 200px;
             flex-flow: column-reverse wrap;
+            /* setar novamente em linha */
             flex-flow: row wrap;
-
+            /* temos o start do main axis e o end do main axis */
+            /* alinha conteúdo com o início do main axis */
             justify-content: flex-start;
             justify-content: flex-end;
             justify-content: center;
             justify-content: space-around;
-            flex-direction: row-reverse;
             justify-content: space-between;
 
-            /* Cross Axis */
+            /* trabalhando no cross axis */
             height: 400px;
+            /* default */
             align-items: stretch;
+            /* alinha itens pela base do conteúdo */
             align-items: baseline;
             align-items: flex-start;
             align-items: flex-end;
@@ -51,6 +64,7 @@
             align-content: space-around;
             align-content: space-between;
         }
+
     </style>
 </head>
 
